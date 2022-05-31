@@ -35,11 +35,22 @@ h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+#add-item-container > img {
+  width: 15px;
+  padding: 16px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 #list-header-container > div > img {
   width: 15px;
   padding: 16px;
   cursor: pointer;
   opacity: 0.6;
+}
+
+#add-item-container > img:hover {
+  opacity: 1;
 }
 
 #list-header-container > div > img:hover {
@@ -55,17 +66,6 @@ h1 {
   height: 50px;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-#add-item-container > img {
-  width: 15px;
-  padding: 16px;
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-#add-item-container > img:hover {
-  opacity: 1;
 }
 
 #add-item {
@@ -163,7 +163,7 @@ input:checked {
   border: none;
   opacity: 0.5;
   width: fit-content;
-  height: fit-content;
+  height: min-content;
   color: #545862;
   background-color: #f6f6f6;
 }
