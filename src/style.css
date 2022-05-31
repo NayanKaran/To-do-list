@@ -69,6 +69,7 @@ h1 {
 }
 
 #add-item {
+  outline: none;
   border: none;
   padding-left: 16px;
   font-style: italic;

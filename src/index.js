@@ -1,4 +1,5 @@
 // import _ from 'lodash';
+import './reset.css';
 import './style.css';
 import dragDropIcon from './images/drag-drop-icon.svg';
 
