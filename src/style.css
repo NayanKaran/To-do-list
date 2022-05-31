@@ -85,12 +85,6 @@ h1 {
   font-family: "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
 }
 
-input[type="text"]:focus {
-  outline: none;
-  font-size: 15px;
-  line-height: 20px;
-}
-
 .task-drag-icon {
   width: 15px;
   padding: 16px;
