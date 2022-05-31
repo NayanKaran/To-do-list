@@ -8,7 +8,7 @@ A webapp to save a list of books.
 
 ## Live Demo
 
-[https://nayankaran.github.io/Awesome-books/](https://nayankaran.github.io/Awesome-books/)
+[https://nayankaran.github.io/To-do-list/](https://nayankaran.github.io/To-do-list/)
 
 ## Getting Started
 
