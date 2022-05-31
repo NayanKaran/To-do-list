@@ -86,7 +86,7 @@ h1 {
 }
 
 .task-drag-icon {
-  width: 15px;
+  height: 15px;
   padding: 16px;
   cursor: move;
   opacity: 0.6;
