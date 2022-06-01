@@ -1,5 +1,6 @@
 # To-do list
-A webapp to track todo list.
+
+A simple webapp to manage tasks.
 
 ## Built With
 
