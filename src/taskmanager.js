@@ -20,6 +20,12 @@ export default class TaskManager {
       localStorage.setItem(this.key, JSON.stringify(this.taskList));
     }
 
+    updateStatus = (status, index) => {
+      this.taskList[index - 1].completed = status;
+      
+      localStorage.setItem(this.key, JSON.stringify(this.taskList));
+    }
+
     updateIndex = () => {
       this.taskList.forEach((task, index) => {
         task.index = index + 1;
@@ -28,6 +34,12 @@ export default class TaskManager {
 
     remove = (index) => {
       this.taskList.splice(index - 1, 1);
+      this.updateIndex();
+      localStorage.setItem(this.key, JSON.stringify(this.taskList));
+    }
+
+    removeCompletedTasks = () => {
+      this.taskList = this.taskList.filter(task => (task.completed !== true))
       this.updateIndex();
       localStorage.setItem(this.key, JSON.stringify(this.taskList));
     }
