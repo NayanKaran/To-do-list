@@ -3,8 +3,8 @@ import './reset.css';
 import './style.css';
 import dragDropIcon from './images/drag-drop-icon.svg';
 import deleteIcon from './images/delete-icon.svg';
-import toDoList from './todolist.js'
-import updateListItem from './taskStatusManager.js'
+import toDoList from './todolist.js';
+import updateListItem from './taskStatusManager.js';
 
 function getListItem(task) {
   const todoTaskElement = document.createElement('li');
@@ -14,11 +14,10 @@ function getListItem(task) {
     const todoTaskStatus = document.createElement('input');
     todoTaskStatus.type = 'checkbox';
     todoTaskStatus.checked = task.completed;
-    todoTaskStatus.addEventListener('change', ()=>{
+    todoTaskStatus.addEventListener('change', () => {
       updateListItem(todoTaskStatus.checked, task.index);
-    })
+    });
     todoTaskStatus.classList.add('task-status');
-    todoTaskStatus.task = task;
     todoTaskElement.appendChild(todoTaskStatus);
   }
   {
