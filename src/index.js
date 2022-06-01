@@ -14,7 +14,8 @@ function getListItem(task) {
     const todoTaskStatus = document.createElement('input');
     todoTaskStatus.type = 'checkbox';
     todoTaskStatus.checked = task.completed;
-    todoTaskStatus.addEventListener('change', () => {
+    todoTaskStatus.addEventListener('change', (event) => {
+      event.target.nextSibling.style.textDecoration = 'line-through';
       updateListItem(todoTaskStatus.checked, task.index);
     });
     todoTaskStatus.classList.add('task-status');
