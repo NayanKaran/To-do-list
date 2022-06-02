@@ -1,14 +1,15 @@
 body {
   font-family: "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
   background-color: #f6f6f6;
+  padding: 0 16px;
   color: #545862;
 }
 
 #todo-list-section {
   display: flex;
   flex-direction: column;
-  width: 480px;
-  margin: 180px auto;
+  max-width: 480px;
+  margin: 16vh auto;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -119,7 +120,7 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 50px;
+  min-height: 50px;
   padding-left: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -160,13 +161,16 @@ input:checked {
 
 .task-description {
   line-height: 20px;
+  height: 20px;
   word-wrap: break-word;
+  resize: none;
   font-size: 1rem;
   font-weight: 300;
   border: 0;
   outline: 0;
-  width: 400px;
+  width: 84%;
   padding-left: 16px;
+  overflow: auto;
   font-family: "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
 }
 
