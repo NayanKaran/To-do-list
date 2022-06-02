@@ -14,17 +14,20 @@ function getListItem(task) {
     const todoTaskStatus = document.createElement('input');
     todoTaskStatus.type = 'checkbox';
     todoTaskStatus.checked = task.completed;
-    todoTaskStatus.addEventListener('change', (event) => {
-      event.target.nextSibling.style.textDecoration = 'line-through';
+    todoTaskStatus.addEventListener('change', () => {
+      if (!todoTaskStatus.checked) todoTaskStatus.nextSibling.style.textDecoration = 'none';
+      else todoTaskStatus.nextSibling.style.textDecoration = 'line-through';
       updateListItem(todoTaskStatus.checked, task.index);
     });
     todoTaskStatus.classList.add('task-status');
     todoTaskElement.appendChild(todoTaskStatus);
   }
   {
-    const todoTaskDescription = document.createElement('input');
+    const todoTaskDescription = document.createElement('textarea');
     todoTaskDescription.value = task.description;
     todoTaskDescription.classList.add('task-description');
+
+    if (todoTaskElement.firstChild.checked) todoTaskDescription.style.textDecoration = 'line-through';
 
     todoTaskDescription.addEventListener('keyup', (event) => {
       toDoList.updateDescription(event.target.value, task.index);
