@@ -5,6 +5,7 @@ import dragDropIcon from './images/drag-drop-icon.svg';
 import deleteIcon from './images/delete-icon.svg';
 import toDoList from './todolist.js';
 import updateListItem from './taskStatusManager.js';
+import './dragdrop.js';
 
 function getListItem(task) {
   const todoTaskElement = document.createElement('li');

@@ -44,6 +44,12 @@ export default class TaskManager {
       localStorage.setItem(this.key, JSON.stringify(this.taskList));
     }
 
+    updateList = (oldIndex, newIndex) => {
+      this.taskList.splice(newIndex, 0, this.taskList.splice(oldIndex, 1)[0]);
+      this.updateIndex();
+      localStorage.setItem(this.key, JSON.stringify(this.taskList));
+    }
+
     swap = (index1, index2) => {
       this.taskList[index1 - 1].index = index2;
       this.taskList[index2 - 1].index = index1;
