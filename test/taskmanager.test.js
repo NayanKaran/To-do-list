@@ -30,4 +30,18 @@ describe('Testing add item & remove item', () => {
     expect(task.completed).toBe(false);
     newList.remove(1);
   });
+  test('Clear Completed Tasks', ()=> {
+    newList.add('New Task description0');
+    newList.add('New Task description1');
+    newList.add('New Task description2');
+    newList.add('New Task description3');
+    newList.updateStatus(true, 2);
+    newList.updateStatus(true, 3);
+    newList.removeCompletedTasks();
+    expect(newList.taskList.length).toBe(2);
+    expect(newList.taskList[0].description).toBe('New Task description0');
+    expect(newList.taskList[1].description).toBe('New Task description3');
+    newList.remove(1);
+    newList.remove(2);
+  });
 });
