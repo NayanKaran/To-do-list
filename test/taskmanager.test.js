@@ -42,6 +42,6 @@ describe('Testing add item & remove item', () => {
     expect(newList.taskList[0].description).toBe('New Task description0');
     expect(newList.taskList[1].description).toBe('New Task description3');
     newList.remove(1);
-    newList.remove(2);
+    newList.remove(1);
   });
 });
