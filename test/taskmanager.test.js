@@ -17,20 +17,20 @@ describe('Testing add item & remove item', () => {
     expect(newList.taskList.length).toBe(0);
   });
   test('Editing the task description', () => {
-    let task = newList.add('New Task description');
+    const task = newList.add('New Task description');
     newList.updateDescription('Updated Task description', 1);
     expect(task.description).toBe('Updated Task description');
     newList.remove(1);
   });
-  test('Update Task Status', ()=> {
-    let task = newList.add('New Task description');
+  test('Update Task Status', () => {
+    const task = newList.add('New Task description');
     newList.updateStatus(true, 1);
     expect(task.completed).toBe(true);
     newList.updateStatus(false, 1);
     expect(task.completed).toBe(false);
     newList.remove(1);
   });
-  test('Clear Completed Tasks', ()=> {
+  test('Clear Completed Tasks', () => {
     newList.add('New Task description0');
     newList.add('New Task description1');
     newList.add('New Task description2');
