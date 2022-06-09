@@ -36,6 +36,8 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@bapidebabrata](https://twitter.com/bapidebabrata)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/debabrata-mandal-83461696/)
 
+👤 **victor David**
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
