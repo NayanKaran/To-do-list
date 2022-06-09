@@ -16,4 +16,18 @@ describe('Testing add item & remove item', () => {
     newList.remove(1);
     expect(newList.taskList.length).toBe(0);
   });
+  test('Editing the task description', () => {
+    let task = newList.add('New Task description');
+    newList.updateDescription('Updated Task description', 1);
+    expect(task.description).toBe('Updated Task description');
+    newList.remove(1);
+  });
+  test('Update Task Status', ()=> {
+    let task = newList.add('New Task description');
+    newList.updateStatus(true, 1);
+    expect(task.completed).toBe(true);
+    newList.updateStatus(false, 1);
+    expect(task.completed).toBe(false);
+    newList.remove(1);
+  });
 });
