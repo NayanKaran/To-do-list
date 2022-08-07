@@ -102,7 +102,7 @@ ul {
 
 .task-drag-icon {
   height: 15px;
-  padding-right: 16px;
+  padding: 16px;
   cursor: move;
   opacity: 0.6;
   margin-left: auto;
