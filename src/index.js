@@ -87,12 +87,14 @@ function addTask(description) {
 
 const addItemElement = document.getElementById('add-item');
 
-addItemElement.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    addTask(event.target.value);
-    event.target.value = '';
-  }
+addItemElement.addEventListener('keypress', () => {
+  addItemElement.style.height = 'auto';
+  addItemElement.style.height = `${addItemElement.scrollHeight}px`;
+});
+
+addItemElement.addEventListener('change', () => {
+  addItemElement.style.height = 'auto';
+  addItemElement.style.height = `${addItemElement.scrollHeight}px`;
 });
 
 document.querySelector('#add-item-container > img').addEventListener('click', (event) => {
