@@ -26,12 +26,15 @@ function getListItem(task) {
   {
     const todoTaskDescription = document.createElement('textarea');
     todoTaskDescription.value = task.description;
+    todoTaskDescription.rows = '1';
     todoTaskDescription.classList.add('task-description');
 
     if (todoTaskElement.firstChild.checked) todoTaskDescription.style.textDecoration = 'line-through';
 
     todoTaskDescription.addEventListener('keyup', (event) => {
       toDoList.updateDescription(event.target.value, task.index);
+      todoTaskDescription.style.height = 'auto';
+      todoTaskDescription.style.height = `${todoTaskDescription.scrollHeight}px`;
     });
 
     todoTaskDescription.addEventListener('focus', (event) => {
@@ -64,6 +67,10 @@ function getListItem(task) {
         todoTaskElement.remove();
         toDoList.remove(task.index);
       }
+    });
+    todoTaskDragIcon.addEventListener('load', (event) => {
+      event.target.previousSibling.style.height = 'auto';
+      event.target.previousSibling.style.height = `${event.target.previousSibling.scrollHeight}px`;
     });
     todoTaskElement.appendChild(todoTaskDragIcon);
   }

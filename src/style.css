@@ -161,7 +161,6 @@ input:checked {
 
 .task-description {
   line-height: 20px;
-  height: 20px;
   word-wrap: break-word;
   resize: none;
   font-size: 1rem;
@@ -169,7 +168,7 @@ input:checked {
   border: 0;
   outline: 0;
   width: 84%;
-  padding-left: 16px;
+  margin: 16px 0 16px 16px;
   overflow: auto;
   font-family: "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
 }
